@@ -8,8 +8,11 @@ import json
 #url = 'https://www.alibaba.com/catalog/plant-animal-oil_cid136?spm=a2700.8270666-1.left-category.5.71a74cc2ZkXTvG'
 # name = 'plant seed and bulbs'
 #url ='https://www.alibaba.com/catalog/plant-seeds-bulbs_cid100001746?spm=a2700.8270666-1.left-category.33.71a74cc2ZkXTvGi'
-name = 'ariocarpus retusus'
-url = 'https://www.alibaba.com/trade/search?fsb=y&IndexArea=product_en&CatId=&SearchText=ariocarpus+retusus&viewtype=G&tab='
+name = "ariocarpus retusus"
+#url = 'https://www.alibaba.com/trade/search?fsb=y&IndexArea=product_en&CatId=&SearchText=ariocarpus+retusus&viewtype=G&tab='
+
+temp = name.replace(" ", "+") 
+url="https://www.alibaba.com/trade/search?fsb=y&IndexArea=product_en&CatId=&SearchText={0}&viewtype=G".format(temp)
 
 # output of crawler
 response = urlopen(url)
