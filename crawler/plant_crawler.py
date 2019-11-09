@@ -25,6 +25,7 @@ XPATH = {
     'XPATH_PRODUCT_MIN_ORDER' : ".//div[@class='item-info']//div[@class='min-order']/b/text()",
     'XPATH_SELLER_YEARS' : ".//div[@class='item-info']//div[@class='stitle util-ellipsis']//div[contains(@class,'supplier-year')]//text()",
     'XPATH_SELLER_NAME' : ".//div[@class='item-info']//div[@class='stitle util-ellipsis']//a/@title", 
+    'XPATH_SELLER_RESPONSE_RATE' : ".//div[@class='item-info']//div[@class='sstitle']//div[@class='num']/i/text()",
     'XPATH_PRODUCT_LINK' : ".//div[@class='item-info']//h2/a/@href"
 }
 
