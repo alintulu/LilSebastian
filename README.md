@@ -24,7 +24,8 @@ We used a scraper to identify the relevant postings on alibaba, which then fed i
 
 ## Python requirements
 
-  - python 3
+ Requires python 3. Python packages required are
+ 
   - urllib
   - lxml
   - pandas
