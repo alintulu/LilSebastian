@@ -13,8 +13,6 @@ value = ['18189', '1', 'I', 'ariocarpus retusus']
 df = pd.DataFrame(columns = keys_allplants)
 df.loc[0] = value
 
-print('test')
-
 # name = 'plant and seed oils'
 #url = 'https://www.alibaba.com/catalog/plant-animal-oil_cid136?spm=a2700.8270666-1.left-category.5.71a74cc2ZkXTvG'
 # name = 'plant seed and bulbs'
@@ -85,4 +83,4 @@ for index, row in df.iterrows():
 # save into json
 name = '../output/'+name.replace(" ", "")+'.json'
 with open(name, 'w') as outfile:
-    json.dump(specific_plant, outfile)
+    json.dump([specific_plant], outfile)
