@@ -82,5 +82,9 @@ for index, row in df.iterrows():
 
 # save into json
 name = '../output/'+name.replace(" ", "")+'.json'
+with open(name) as f:
+    test = json.load(f)
+    print(type(test))
+
 with open(name, 'w') as outfile:
-    json.dump([specific_plant], outfile)
+    json.dump([specific_plant], outfile, indent = 4)
