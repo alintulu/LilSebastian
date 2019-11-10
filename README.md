@@ -1,4 +1,4 @@
-# Team LilSebastian for Zoohackathon 2019 Helsinki
+# Team Li'l Sebastian for Zoohackathon 2019 Helsinki
 
 ## Our contribution to problem 6
 
