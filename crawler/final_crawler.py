@@ -7,7 +7,7 @@ import pandas as pd
 import pickle
 
 # json file of wanted plants
-with open('../input/planty.json') as f:
+with open('../input/plants.json') as f:
     want_plants = json.load(f)
 
 # loop and save plant ids
@@ -69,11 +69,12 @@ def parse(idd, name, tries):
     if not tree.xpath(XPATH['XPATH_PRODUCT_NAME']):
         if tries > 4:
             print("failed too many times!!!!!")
-            return 0
+            return
         else:
             print("failed but will try again!!!!")
             t = tries + 1
             parse(idd, name, t)
+            return
 
     nr_offers = 0
     # iterate of xpaths and save info
@@ -118,7 +119,10 @@ def parse(idd, name, tries):
 
 # save into json
 for i, name in enumerate(plant_names):
-    jsonname = '../output/'+name+'.json'
+    jsonname = '../output/offers.json'
     plant_info = parse(plant_id[i], name, 0)
-    with open(jsonname, 'a') as outfile:
-        json.dump(plant_info, outfile, indent = 4)
+    if plant_info is None:
+        print('ZERO')
+    else:
+        with open(jsonname, 'a') as outfile:
+            json.dump(plant_info, outfile, indent = 4)
