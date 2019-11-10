@@ -8,7 +8,7 @@ This is a web scraper as part of our application for Zoohackathon 2019 in Helsin
 
   - The json file [input/plants.json](https://github.com/alintulu/LilSebastian/blob/master/input/plants.json) contains the names and ids of the CITES listed plants we would like to find further information on
   - The python file [crawler/final_crawler.py](https://github.com/alintulu/LilSebastian/blob/master/crawler/final_crawler.py) is my final version of the crawler I use to scrape with
-  - Run it by being in the folder `crawler` an type into the terminal
+  - Run it by being in the folder `crawler` an type into the terminal (requirements are found below)
   
   ```
   python final_crawler.py
@@ -24,6 +24,7 @@ We used a scraper to identify the relevant postings on alibaba, which then fed i
 
 ## Python requirements
 
+  - python 3
   - urllib
   - lxml
   - pandas
