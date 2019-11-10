@@ -69,7 +69,6 @@ def parse(idd, name, tries):
     if not tree.xpath(XPATH['XPATH_PRODUCT_NAME']):
         if tries > 4:
             print("failed too many times!!!!!")
-            return
         else:
             print("failed but will try again!!!!")
             t = tries + 1
